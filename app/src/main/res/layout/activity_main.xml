@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.android.karatetournamentapp.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/karatetournamentbackground" />
+
+    <LinearLayout
+        android:id="@+id/parentLayoutView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:context="com.example.android.courtcounter.MainActivity">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:context="com.example.android.courtcounter.MainActivity">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-heavy"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="130dp"
+                    android:text="Combatant 1"
+                    android:textColor="@color/lightGray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/combatant_one_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-heavy"
+                    android:gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:paddingTop="16dp"
+                    android:text="0"
+                    android:textColor="@color/lightGray"
+                    android:textSize="56sp" />
+
+                <Button
+                    android:id="@+id/punch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    android:background="@color/buttonRed"
+                    android:onClick="addOneCombatantOne"
+                    android:text="Punch +1pt"
+                    android:textColor="@color/lightGray" />
+
+                <Button
+                    android:id="@+id/kick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    android:background="@color/buttonRed"
+                    android:onClick="addTwoCombatantOne"
+                    android:text="Kick +2pts"
+                    android:textColor="@color/lightGray" />
+
+                <Button
+                    android:id="@+id/subtractPoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    android:background="@color/buttonRed"
+                    android:onClick="minusOneCombatantOne"
+                    android:text="Illegal -1pt"
+                    android:textColor="@color/lightGray" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp"
+                android:background="@color/lineDivider" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:context="com.example.android.courtcounter.MainActivity">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-heavy"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="130dp"
+                    android:text="Combatant 2"
+                    android:textColor="@color/lightGray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/combatant_two_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-heavy"
+                    android:gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:paddingTop="16dp"
+                    android:text="0"
+                    android:textColor="@color/lightGray"
+                    android:textSize="56sp" />
+
+                <Button
+                    android:id="@+id/punch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    android:background="@color/buttonRed"
+                    android:onClick="addOneCombatantTwo"
+                    android:text="Punch +1pt"
+                    android:textColor="@color/lightGray" />
+
+                <Button
+                    android:id="@+id/kick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/buttonRed"
+                    android:onClick="addTwoCombatantTwo"
+                    android:text="Kick +2pts"
+                    android:textColor="@color/lightGray" />
+
+                <Button
+                    android:id="@+id/subtractPoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/buttonRed"
+                    android:onClick="minusOneCombatantTwo"
+                    android:text="Illegal -1pt"
+                    android:textColor="@color/lightGray" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/score_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="32dp"
+        android:background="@color/buttonRed"
+        android:onClick="resetScore"
+        android:text="Reset"
+        android:textAllCaps="true"
+        android:textColor="@color/lightGray" />
+
+</RelativeLayout>
